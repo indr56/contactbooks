@@ -7,11 +7,13 @@ import com.plivo.model.Contact;
 import com.plivo.model.GetResponse;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class ContactBookDaoImpl implements ContactBookDao {
 
     private static String HEROKU_JDBC_DATABASE_URL = "JDBC_DATABASE_URL";
