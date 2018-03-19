@@ -10,15 +10,17 @@ public class CredentialsValidator {
 		if(StringUtils.isEmpty(name)){
 			return false;
 		}
-		else{
-		return true;
-		}	}
+		else{		
+			return true;
+		}	
+	}
 	
 	public boolean validateEmail(String eMail){
 		if(StringUtils.isEmpty(eMail) || !eMail.matches("(.*)@(.*)(\\.)(.*)")){
 			return false;
 		}
 		else{
-		return true;
-		}	}
+			return true;
+		}	
+	}
 }

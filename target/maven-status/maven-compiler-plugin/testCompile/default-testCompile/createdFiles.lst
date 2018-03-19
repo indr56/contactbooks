@@ -1,0 +1,8 @@
+com\plivo\utiltites\BasicAuthenticatorTest.class
+com\plivo\controllers\AddContactsControllerTest.class
+com\plivo\controllers\DeleteContactsControllerTest.class
+com\plivo\utiltites\CredentialsValidatorTest.class
+com\plivo\controllers\EditContactsControllerTest.class
+com\plivo\dao\impl\ContactBookDaoImplTest.class
+com\plivo\managers\AddContactManagerTest.class
+com\plivo\controllers\GetContactsControllerTest.class

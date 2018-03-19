@@ -34,7 +34,7 @@ public class GetContactsController {
 
 	 
 	 @RequestMapping(value = "/", method = RequestMethod.GET)
-	 public ResponseEntity<String> getContact(@RequestParam("name") String name, @RequestParam("email") String email
+	 public ResponseEntity<String> getContact(@RequestParam(value = "name",required=false) String name, @RequestParam(value = "email",required=false) String email
 			 ,@RequestParam("pageNumber") int pageNumber, @RequestHeader("Username") String username, @RequestHeader("Password") String password) {
 		 if(!credentialsValidator.validateName(name) && !credentialsValidator.validateEmail(email)){
 			 return ResponseEntity.badRequest().body(AppConstants.BAD_REQUEST_MESSAGE);

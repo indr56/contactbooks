@@ -39,6 +39,7 @@ public class AddContactsController {
 			@RequestBody String info, @RequestHeader("Username") String username,
 			@RequestHeader("Password") String password) {
 		if (!credentialsValidator.validateName(name) || !credentialsValidator.validateEmail(email)) {
+			
 			return ResponseEntity.badRequest().body(AppConstants.BAD_REQUEST_MESSAGE);
 		}
 		if (!basicAuthenticator.authenticate(username, password)) {

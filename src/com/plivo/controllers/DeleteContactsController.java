@@ -46,7 +46,8 @@ public class DeleteContactsController {
 		 try {
 			return ResponseEntity.ok(deleteContactsManager.deleteContact(email));
 		} catch (ContactDaoException e) {
-			return ResponseEntity.ok(AppConstants.DELETE_FAIL_MESSAGE);
+			return ResponseEntity.ok(e.getMessage());
+			//return ResponseEntity.ok(AppConstants.DELETE_FAIL_MESSAGE);
 		} 
 	 }
 }

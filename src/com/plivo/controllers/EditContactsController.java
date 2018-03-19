@@ -34,7 +34,7 @@ public class EditContactsController {
 
 	 
 	 @RequestMapping(value = "/", method = RequestMethod.PUT)
-	 public ResponseEntity<String> editContact(@RequestParam("name") String name, @RequestParam("email") String email, @RequestBody String info
+	 public ResponseEntity<String> editContact(@RequestParam(value = "name",required=false) String name, @RequestParam(value = "email",required=false) String email, @RequestBody String info
 			 ,@RequestHeader("Username") String username, @RequestHeader("Password") String password) {
 		 if(!credentialsValidator.validateName(name) && !credentialsValidator.validateEmail(email)){
 			 return ResponseEntity.badRequest().body(AppConstants.BAD_REQUEST_MESSAGE);
